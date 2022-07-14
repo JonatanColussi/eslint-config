@@ -60,6 +60,8 @@ const typescriptRules = {
   '@typescript-eslint/no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'warn',
+  'no-shadow': 'off',
+  '@typescript-eslint/no-shadow': 'error',
 };
 
 const unicornRules = {

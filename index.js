@@ -258,6 +258,12 @@ module.exports = {
       },
     ],
     'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
+    'jest/expect-expect': [
+      'error',
+      {
+        assertFunctionNames: ['expect', 'request.**.expect'],
+      },
+    ],
     ...importRules,
     ...reactRules,
     ...unicornRules,

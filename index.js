@@ -264,6 +264,7 @@ module.exports = {
         assertFunctionNames: ['expect', 'request.**.expect'],
       },
     ],
+    'no-empty-function': ['warn', { allow: ['constructors'] }],
     ...importRules,
     ...reactRules,
     ...unicornRules,

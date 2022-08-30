@@ -97,13 +97,13 @@ const unicornRules = {
   'unicorn/prevent-abbreviations': [
     'warn',
     {
+      ignore: ['e2e'],
       replacements: {
         acc: false,
         arg: false,
         args: false,
         db: false,
         dev: false,
-        e2e: false,
         el: false,
         env: false,
         fn: false,

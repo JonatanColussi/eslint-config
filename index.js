@@ -103,6 +103,7 @@ const unicornRules = {
         args: false,
         db: false,
         dev: false,
+        e2e: false,
         el: false,
         env: false,
         fn: false,

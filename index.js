@@ -57,7 +57,10 @@ const typescriptRules = {
     { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
   ],
   'no-unused-vars': 'off',
-  '@typescript-eslint/no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
+  '@typescript-eslint/no-unused-vars': [
+    'warn',
+    { args: 'none', ignoreRestSiblings: true, argsIgnorePattern: '^_' },
+  ],
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'warn',
   'no-shadow': 'off',
@@ -136,6 +139,8 @@ module.exports = {
     'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
     'plugin:testing-library/react',
+    'plugin:sonarjs/recommended',
+    'plugin:security/recommended',
   ],
   env: {
     commonjs: true,
@@ -144,7 +149,14 @@ module.exports = {
     'jest/globals': true,
     node: true,
   },
-  plugins: ['@babel', 'react-hooks', 'simple-import-sort', 'sort-destructure-keys', 'unicorn'],
+  plugins: [
+    '@babel',
+    'react-hooks',
+    'simple-import-sort',
+    'sort-destructure-keys',
+    'unicorn',
+    'sonarjs',
+  ],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',

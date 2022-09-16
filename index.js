@@ -65,6 +65,7 @@ const typescriptRules = {
   '@typescript-eslint/no-useless-constructor': 'warn',
   'no-shadow': 'off',
   '@typescript-eslint/no-shadow': 'error',
+  'class-methods-use-this': ['warn', { exceptMethods: ['entity', 'historyEntity'] }],
 };
 
 const unicornRules = {

@@ -12,6 +12,7 @@ const importRules = {
   'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   'import/no-import-module-exports': 'off',
   'import/no-named-as-default': 'off',
+  'import/order': 'off',
   'import/prefer-default-export': 'off',
 };
 
@@ -180,6 +181,9 @@ module.exports = {
       parser: '@babel/eslint-parser',
       parserOptions: {
         requireConfigFile: false,
+        babelOptions: {
+          presets: ['@babel/preset-react'],
+        },
       },
       rules: {
         'react/prop-types': 'warn',
@@ -259,13 +263,15 @@ module.exports = {
       {
         groups: [
           ['^\\u0000'], // Side effect imports
-          ['^react$', '^react-dom$', '^react', '^@?\\w'],
-          ['^(src/)?modules'],
-          ['^(src/)?config', '^(src/)?literals'],
-          ['^(src/)?actions', '^(src/)?reducers', '^(src/)?sagas'],
-          ['^(src/)?components', '^(src/)?containers', '^(src/)?routes'],
-          ['^(src/)?types'],
-          ['^test'],
+          ['^node', `^(${require('module').builtinModules.join('|')})(/|$)`],
+          ['^react$', '^react-dom$', '^react', '^@?(?!test/)\\w'],
+          ['^~$'],
+          ['^~/modules'],
+          ['^~/config'],
+          ['^~/actions', '^~/literals', '^~/reducers', '^~/services', '^~/sagas'],
+          ['^~/components', '^~/containers', '^~/routes'],
+          ['^~', '^src'],
+          ['^test/\\w'],
           ['^\\./[^.]'], // './*'
           ['^\\.\\./'], // '../*'
         ],

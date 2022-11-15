@@ -1,6 +1,6 @@
 {
   "name": "@colussi/eslint-config",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Shared ESLint config",
   "author": "Jonatan Colussi <jonatancolussi81@gmail.com>",
   "repository": {

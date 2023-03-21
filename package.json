@@ -61,7 +61,7 @@
   "devDependencies": {
     "@colussi/prettier-config": "^1.0.3",
     "jest": "^29.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   },
   "prettier": "@colussi/prettier-config"
 }

@@ -185,7 +185,7 @@ const unicornRules = {
 module.exports = {
   extends: [
     'airbnb-base',
-    'react-hooks',
+    'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
     'plugin:jest/style',
     'plugin:jest-dom/recommended',

@@ -21,7 +21,16 @@ const reactRules = {
   'react/jsx-filename-extension': 'off',
   'react/jsx-fragments': 'off',
   'react/jsx-props-no-spreading': 'off',
-  'react/jsx-sort-props': ['warn', { reservedFirst: true }],
+  'react/jsx-sort-props': [
+    2,
+    {
+      callbacksLast: true,
+      shorthandFirst: false,
+      shorthandLast: true,
+      ignoreCase: true,
+      noSortAlphabetically: false,
+    },
+  ],
   'react/no-array-index-key': 'warn',
   'react/no-unescaped-entities': 'off',
   'react/no-unused-prop-types': 'warn',
@@ -183,8 +192,10 @@ const unicornRules = {
 };
 
 module.exports = {
+  ignorePatterns: [''],
   extends: [
     'airbnb-base',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jest/recommended',
     'plugin:jest/style',
@@ -209,6 +220,7 @@ module.exports = {
     'sonarjs',
     'typescript',
     '@typescript-eslint',
+    'jsx-a11y',
   ],
   parserOptions: {
     ecmaVersion: 'latest',

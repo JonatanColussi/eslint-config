@@ -192,7 +192,7 @@ const unicornRules = {
 };
 
 module.exports = {
-  ignorePatterns: [''],
+  ignorePatterns: ['node_modules', 'dist', 'coverage', 'logs'],
   extends: [
     'airbnb-base',
     'plugin:react/recommended',

@@ -125,6 +125,8 @@ const typescriptRules = {
       checksVoidReturn: false,
     },
   ],
+  '@typescript-eslint/prefer-readonly': ['error', { onlyInlineLambdas: true }],
+  'sort-exports/sort-exports': ['warn', { sortDir: 'asc' }],
 };
 
 const unicornRules = {
@@ -221,6 +223,7 @@ module.exports = {
     'typescript',
     '@typescript-eslint',
     'jsx-a11y',
+    'sort-exports',
   ],
   parserOptions: {
     ecmaVersion: 'latest',

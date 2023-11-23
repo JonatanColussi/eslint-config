@@ -26,7 +26,7 @@
   "license": "MIT",
   "peerDependencies": {
     "jest": "^27.0.0 || ^28.0.0 || ^29.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0 || ^5.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.23.3",

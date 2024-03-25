@@ -205,7 +205,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:testing-library/react',
     'plugin:sonarjs/recommended',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
   ],
   env: {
     commonjs: true,
@@ -220,7 +220,6 @@ module.exports = {
     'sort-destructure-keys',
     'unicorn',
     'sonarjs',
-    'typescript',
     '@typescript-eslint',
     'jsx-a11y',
     'sort-exports',
@@ -239,6 +238,9 @@ module.exports = {
         moduleDirectory: ['node_modules', './', './src'],
       },
       typescript: {},
+    },
+    react: {
+      version: 'detect',
     },
   },
   overrides: [

@@ -204,7 +204,7 @@ module.exports = {
     'plugin:jest-dom/recommended',
     'plugin:prettier/recommended',
     'plugin:testing-library/react',
-    'plugin:sonarjs/recommended',
+    'plugin:sonarjs/recommended-legacy',
     'plugin:security/recommended-legacy',
   ],
   env: {
